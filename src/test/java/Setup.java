@@ -11,8 +11,10 @@ public class Setup {
 
     @BeforeTest
     public void setup () {
+        ChromeOptions co = new ChromeOptions();
+        co.addArguments("--remote-allow-origins=*");
         WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(co);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }

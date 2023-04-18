@@ -36,7 +36,7 @@ public class Elem {
         flag = actual_msg.equals("No conversations in Bin.");
     }
     public void login() throws InterruptedException {
-        email.sendKeys("ikayon@gmail.com");
+        email.sendKeys("testdemo1@gmail.com");
         nextbtn.click();
         Thread.sleep(3000);
         pwd.sendKeys("_Hj24msfj93");
